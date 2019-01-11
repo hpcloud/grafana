@@ -1,0 +1,12 @@
+CREATE DATABASE grafanaperf;
+REVOKE CONNECT ON DATABASE grafanaperf FROM PUBLIC;
+GRANT CONNECT ON DATABASE grafanaperf TO postgres;
+
+\c grafanaperf;
+
+CREATE TABLE perf (
+ ID serial NOT NULL PRIMARY KEY,
+ benchmark text NOT NULL,
+ data json NOT NULL,
+ ts TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+);

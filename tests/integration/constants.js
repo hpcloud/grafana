@@ -1,0 +1,6 @@
+
+module.exports = {
+  TIMEOUT: 10 * 1000,
+  VIEWPORT_HEIGHT: 900,
+  VIEWPORT_WIDTH: 1280,
+};
